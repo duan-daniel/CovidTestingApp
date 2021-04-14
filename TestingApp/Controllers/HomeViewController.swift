@@ -9,13 +9,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    // avatar model
     var avatar = Avatar()
 
     // IBOutlets
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var avatarTestingCount: UILabel!
     @IBOutlet weak var avatarDescription: UILabel!
-    
     @IBOutlet weak var checkInButton: UIButton!
     @IBOutlet weak var scheduleTestButton: UIButton!
     
@@ -35,6 +35,9 @@ class HomeViewController: UIViewController {
         scheduleTestButton.layer.cornerRadius = 15
     }
     
+    /**
+     Updates the avatar on the main screen based on amount of tests made by the user.
+     */
     func updateAvatar() {
         
         if (avatar.testingCount < 2) {
@@ -66,13 +69,13 @@ class HomeViewController: UIViewController {
         avatarTestingCount.text = avatar.testingCountDescription
     }
     
-    
+    // MARK: (Daniel) To-Do: Verify user location
     @IBAction func checkInButtonPressed(_ sender: UIButton) {
-        
         avatar.testingCount = avatar.testingCount + 1
         updateAvatar()
     }
     
+    // MARK: (Chloe) To-Do: Web Routing
     @IBAction func scheduleTestButtonPressed(_ sender: UIButton) {
         
     }
