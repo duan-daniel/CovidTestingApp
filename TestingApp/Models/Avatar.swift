@@ -11,8 +11,9 @@ import UIKit
 class Avatar {
     
     var imageView: UIImageView = UIImageView()
-    var description: String = ""
+    var desc: String = ""
     var testingCount: Int = 0
     var testingCountDescription: String = ""
+    var testedToday = false
     
 }
